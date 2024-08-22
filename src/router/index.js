@@ -59,7 +59,6 @@ const router = new VueRouter({
 const authUrl = ['/pay', '/myorder']
 router.beforeEach((to, from, next) => {
   const token = store.getters.token
-  console.log(token)
   if (!authUrl.includes(to.path)) {
     next()
     return
